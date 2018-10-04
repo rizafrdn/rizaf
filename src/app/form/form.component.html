@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6"><br>
+      <h2>Form Data Mahasiswa</h2><hr>
+      <label class="form-label">Nim</label>
+      <input type="text"class="form-control" [(ngModel)]="nim">
+      <label class="form-label">Nama</label>
+      <input type="text"class="form-control" [(ngModel)]="nama">
+      <label class="form-label">Kelas</label>
+      <input type="text"class="form-control" [(ngModel)]="kelas">
+    <br>
+    <button class="btn btn-block btn-primary" (click)="tambahData()">Tambah</button>    
+  </div>
+  <!--Display data-->
+      <div class="col-md-6"><br>
+        <h2>Data Mahasiswa</h2><hr>
+    <div class="card" *ngFor="let data of daftarData">
+      <h4 class="card-header">{{ data.nama}}</h4>
+      <div class="card-dody">
+        <h5 class="card-title">{{ data.nim }}</h5>
+        <p class="card-text">{{ data.kelas }}</p>
+      </div>
+  </div>
+</div>
